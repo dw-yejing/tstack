@@ -1,0 +1,20 @@
+spring:
+  statemachine:
+    data:
+      jpa:
+        repositories:
+          enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3206/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&autoReconnect=true
+    username: root
+    password: afsdfsdfsaf
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 10
+      min-idle: 10
+      max-active: 25
+      max-wait: 60000
+      use-unfair-lock: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
