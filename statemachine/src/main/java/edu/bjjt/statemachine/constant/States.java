@@ -1,5 +1,5 @@
 package edu.bjjt.statemachine.constant;
 
 public enum States {
-    SI, S1, S2
+    SI, S1, S2, S3
 }

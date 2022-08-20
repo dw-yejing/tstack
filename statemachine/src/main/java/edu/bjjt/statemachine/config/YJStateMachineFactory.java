@@ -33,7 +33,7 @@ public class YJStateMachineFactory extends EnumStateMachineConfigurerAdapter<Sta
             throws Exception {
         states
                 .withStates()
-                .initial(States.SI)
+                .initial(States.S3)
                 .states(EnumSet.allOf(States.class));
     }
 
@@ -41,6 +41,7 @@ public class YJStateMachineFactory extends EnumStateMachineConfigurerAdapter<Sta
     public void configure(StateMachineTransitionConfigurer<States, Events> transitions)
             throws Exception {
         transitions
+                .withJoin().source(States.S3).source(States.S1).target(States.SI).and()
                 .withExternal()
                 .source(States.SI).target(States.S1).event(Events.E1).action(Events.E1.getAction())
                 .and()

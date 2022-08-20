@@ -1,12 +1,13 @@
 server:
   port: 8081
 
+logging:
+  level:
+    ROOT: INFO
+  file:
+    path: ./log
+
 spring:
-  statemachine:
-    data:
-      jpa:
-        repositories:
-          enabled: true
   datasource:
     url: jdbc:mysql://localhost:3306/citel?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&autoReconnect=true
     username: root
@@ -21,3 +22,4 @@ spring:
       use-unfair-lock: true
       time-between-eviction-runs-millis: 60000
       min-evictable-idle-time-millis: 300000
+

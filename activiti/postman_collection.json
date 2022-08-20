@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "b26cc743-c0ef-44a2-a6cf-58a6a73accdf",
+		"name": "temp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22244092"
+	},
+	"item": [
+		{
+			"name": "新建模型",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/model/save?name=m_name&key=m_key&desc=m_desc&category=m_category",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"model",
+						"save"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "m_name"
+						},
+						{
+							"key": "key",
+							"value": "m_key"
+						},
+						{
+							"key": "desc",
+							"value": "m_desc"
+						},
+						{
+							"key": "category",
+							"value": "m_category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "增加模型的流程",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "modelId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "jsonXml",
+							"value": "{\"resourceId\":\"11098332\",\"properties\":{\"process_id\":\"process\",\"name\":\"\",\"documentation\":\"\",\"process_author\":\"made by 1890\",\"process_version\":\"\",\"process_namespace\":\"http://www.activiti.org/processdef\",\"executionlisteners\":\"\",\"eventlisteners\":\"\",\"signaldefinitions\":\"\",\"messagedefinitions\":\"\"},\"stencil\":{\"id\":\"BPMNDiagram\"},\"childShapes\":[{\"resourceId\":\"sid-32671C70-74F5-4A06-A506-B0613CBE74AC\",\"properties\":{\"overrideid\":\"\",\"name\":\"\",\"documentation\":\"\",\"executionlisteners\":\"\",\"initiator\":\"\",\"formkeydefinition\":\"\",\"formproperties\":\"\",\"conditionsequenceflow\":\"${flag.equals('action2')}\"},\"stencil\":{\"id\":\"StartNoneEvent\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-CB94431B-EF3A-4F19-AEA8-B36346BD2B41\"},{\"resourceId\":\"sid-F462AE15-2D41-44CF-870E-1BE1CF6D6346\"}],\"bounds\":{\"lowerRight\":{\"x\":145.2,\"y\":285},\"upperLeft\":{\"x\":115.19999999999999,\"y\":255}},\"dockers\":[]},{\"resourceId\":\"sid-2FA29058-87A6-4604-B755-CCC1ACF4A0F5\",\"properties\":{\"tasklisteners\":\"\",\"overrideid\":\"\",\"name\":\"manager2\",\"documentation\":\"\",\"asynchronousdefinition\":\"false\",\"exclusivedefinition\":\"false\",\"executionlisteners\":\"\",\"multiinstance_type\":\"None\",\"multiinstance_cardinality\":\"\",\"multiinstance_collection\":\"\",\"multiinstance_variable\":\"\",\"multiinstance_condition\":\"\",\"isforcompensation\":\"false\",\"usertaskassignment\":\"\",\"formkeydefinition\":\"\",\"duedatedefinition\":\"\",\"prioritydefinition\":\"\",\"formproperties\":\"\"},\"stencil\":{\"id\":\"UserTask\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-5DF251B3-CA2D-4340-A50B-881C9F3DDE33\"}],\"bounds\":{\"lowerRight\":{\"x\":362.2,\"y\":358},\"upperLeft\":{\"x\":262.2,\"y\":278}},\"dockers\":[]},{\"resourceId\":\"sid-33435A2F-759A-40EB-A7CF-E39F253C16E7\",\"properties\":{\"tasklisteners\":\"\",\"overrideid\":\"\",\"name\":\"manager1\",\"documentation\":\"\",\"asynchronousdefinition\":\"false\",\"exclusivedefinition\":\"false\",\"executionlisteners\":\"\",\"multiinstance_type\":\"None\",\"multiinstance_cardinality\":\"\",\"multiinstance_collection\":\"\",\"multiinstance_variable\":\"\",\"multiinstance_condition\":\"\",\"isforcompensation\":\"false\",\"usertaskassignment\":\"\",\"formkeydefinition\":\"\",\"duedatedefinition\":\"\",\"prioritydefinition\":\"\",\"formproperties\":\"\"},\"stencil\":{\"id\":\"UserTask\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-E439FD30-081E-44C8-A547-6EDB18D8E143\"}],\"bounds\":{\"lowerRight\":{\"x\":359.2,\"y\":260},\"upperLeft\":{\"x\":259.2,\"y\":180}},\"dockers\":[]},{\"resourceId\":\"sid-1C04E6E2-775B-420C-AAE4-68A8A61D6678\",\"properties\":{\"overrideid\":\"\",\"name\":\"\",\"documentation\":\"\",\"executionlisteners\":\"\"},\"stencil\":{\"id\":\"EndNoneEvent\"},\"childShapes\":[],\"outgoing\":[],\"bounds\":{\"lowerRight\":{\"x\":624.2,\"y\":283.9999999880791},\"upperLeft\":{\"x\":596.2,\"y\":255.99999998807908}},\"dockers\":[]},{\"resourceId\":\"sid-CB94431B-EF3A-4F19-AEA8-B36346BD2B41\",\"properties\":{\"overrideid\":\"\",\"name\":\"申请1\",\"documentation\":\"\",\"conditionsequenceflow\":\"${flag.equals('action1')}\",\"executionlisteners\":\"\",\"defaultflow\":\"false\"},\"stencil\":{\"id\":\"SequenceFlow\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-33435A2F-759A-40EB-A7CF-E39F253C16E7\"}],\"bounds\":{\"lowerRight\":{\"x\":258.59233727090356,\"y\":265.8247188605876},\"upperLeft\":{\"x\":145.14750647909642,\"y\":234.13621863941242}},\"dockers\":[{\"x\":15,\"y\":15},{\"x\":50,\"y\":40}],\"target\":{\"resourceId\":\"sid-33435A2F-759A-40EB-A7CF-E39F253C16E7\"}},{\"resourceId\":\"sid-F462AE15-2D41-44CF-870E-1BE1CF6D6346\",\"properties\":{\"overrideid\":\"\",\"name\":\"申请2\",\"documentation\":\"\",\"conditionsequenceflow\":\"${flag.equals('action2')}\",\"executionlisteners\":\"\",\"defaultflow\":\"false\"},\"stencil\":{\"id\":\"SequenceFlow\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-2FA29058-87A6-4604-B755-CCC1ACF4A0F5\"}],\"bounds\":{\"lowerRight\":{\"x\":261.4674382424966,\"y\":304.6199837123068},\"upperLeft\":{\"x\":145.38568675750338,\"y\":274.0050162876932}},\"dockers\":[{\"x\":15,\"y\":15},{\"x\":50,\"y\":40}],\"target\":{\"resourceId\":\"sid-2FA29058-87A6-4604-B755-CCC1ACF4A0F5\"}},{\"resourceId\":\"sid-9AFD1CE6-8F38-4C87-8CEC-65BF61469EA3\",\"properties\":{\"tasklisteners\":\"\",\"overrideid\":\"\",\"name\":\"boss\",\"documentation\":\"\",\"asynchronousdefinition\":\"false\",\"exclusivedefinition\":\"false\",\"executionlisteners\":\"\",\"multiinstance_type\":\"None\",\"multiinstance_cardinality\":\"\",\"multiinstance_collection\":\"\",\"multiinstance_variable\":\"\",\"multiinstance_condition\":\"\",\"isforcompensation\":\"false\",\"usertaskassignment\":\"\",\"formkeydefinition\":\"\",\"duedatedefinition\":\"\",\"prioritydefinition\":\"\",\"formproperties\":\"\"},\"stencil\":{\"id\":\"UserTask\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-FF4DC41B-731C-4CD4-9BE6-5A23CA0B514C\"}],\"bounds\":{\"lowerRight\":{\"x\":535,\"y\":309.9999999880791},\"upperLeft\":{\"x\":435,\"y\":229.99999998807908}},\"dockers\":[]},{\"resourceId\":\"sid-E439FD30-081E-44C8-A547-6EDB18D8E143\",\"properties\":{\"overrideid\":\"\",\"name\":\"提交1\",\"documentation\":\"\",\"conditionsequenceflow\":\"\",\"executionlisteners\":\"\",\"defaultflow\":\"false\",\"showdiamondmarker\":false},\"stencil\":{\"id\":\"SequenceFlow\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-9AFD1CE6-8F38-4C87-8CEC-65BF61469EA3\"}],\"bounds\":{\"lowerRight\":{\"x\":434.69137565729955,\"y\":251.55513136781315},\"upperLeft\":{\"x\":359.3491601539987,\"y\":232.6101361815208}},\"dockers\":[{\"x\":50,\"y\":40},{\"x\":24.079923892307875,\"y\":27.687694987352586}],\"target\":{\"resourceId\":\"sid-9AFD1CE6-8F38-4C87-8CEC-65BF61469EA3\"}},{\"resourceId\":\"sid-5DF251B3-CA2D-4340-A50B-881C9F3DDE33\",\"properties\":{\"overrideid\":\"\",\"name\":\"提交2\",\"documentation\":\"\",\"conditionsequenceflow\":\"\",\"executionlisteners\":\"\",\"defaultflow\":\"false\",\"showdiamondmarker\":false},\"stencil\":{\"id\":\"SequenceFlow\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-9AFD1CE6-8F38-4C87-8CEC-65BF61469EA3\"}],\"bounds\":{\"lowerRight\":{\"x\":434.8777734961236,\"y\":302.9342208682063},\"upperLeft\":{\"x\":362.71930513287714,\"y\":281.41524819053745}},\"dockers\":[{\"x\":50,\"y\":40},{\"x\":13.626006550843726,\"y\":47.315274101269836}],\"target\":{\"resourceId\":\"sid-9AFD1CE6-8F38-4C87-8CEC-65BF61469EA3\"}},{\"resourceId\":\"sid-FF4DC41B-731C-4CD4-9BE6-5A23CA0B514C\",\"properties\":{\"overrideid\":\"\",\"name\":\"同意\",\"documentation\":\"\",\"conditionsequenceflow\":\"\",\"executionlisteners\":\"\",\"defaultflow\":\"false\"},\"stencil\":{\"id\":\"SequenceFlow\"},\"childShapes\":[],\"outgoing\":[{\"resourceId\":\"sid-1C04E6E2-775B-420C-AAE4-68A8A61D6678\"}],\"bounds\":{\"lowerRight\":{\"x\":595.5062500000001,\"y\":269.9999999880791},\"upperLeft\":{\"x\":535.8843750000001,\"y\":269.9999999880791}},\"dockers\":[{\"x\":50,\"y\":40},{\"x\":14,\"y\":14}],\"target\":{\"resourceId\":\"sid-1C04E6E2-775B-420C-AAE4-68A8A61D6678\"}}],\"bounds\":{\"lowerRight\":{\"x\":1200,\"y\":1050},\"upperLeft\":{\"x\":0,\"y\":0}},\"stencilset\":{\"url\":\"stencilsets/bpmn2.0/bpmn2.0.json\",\"namespace\":\"http://b3mn.org/stencilset/bpmn2.0#\"},\"ssextensions\":[]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/model/source/add",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"model",
+						"source",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "部署模型",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/model/deploy?id=1&category=m_c",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"model",
+						"deploy"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "category",
+							"value": "m_c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "启动流程",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/process/start?orderId=order1&processDefinitionKey=process",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"process",
+						"start"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "order1"
+						},
+						{
+							"key": "processDefinitionKey",
+							"value": "process"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "处理任务",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/task/complete",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"task",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}

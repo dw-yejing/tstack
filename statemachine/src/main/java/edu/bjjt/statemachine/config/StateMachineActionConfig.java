@@ -15,11 +15,18 @@ public class StateMachineActionConfig {
         };
     }
 
-
     public Action<States, Events> action2() {
         return new StateMachineAction(){
             public void deal(StateContext context){
                 System.out.println("e2");
+            }
+        };
+    }
+
+    public Action<States, Events> action3() {
+        return new StateMachineAction(){
+            public void deal(StateContext context){
+                System.out.println("e3");
             }
         };
     }
