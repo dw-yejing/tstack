@@ -1,0 +1,12 @@
+2022-11-02 17:21:07.698  INFO 96332 --- [main] e.b.e.service.impl.RestServiceImplTest   : Starting RestServiceImplTest using Java 1.8.0_25 on DESKTOP-F0HC4JJ with PID 96332 (started by Lenovo in G:\workspace_exercise\tstack\elasticsearch)
+2022-11-02 17:21:07.699 DEBUG 96332 --- [main] e.b.e.service.impl.RestServiceImplTest   : Running with Spring Boot v2.7.3, Spring v5.3.22
+2022-11-02 17:21:07.700  INFO 96332 --- [main] e.b.e.service.impl.RestServiceImplTest   : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 17:21:10.882 DEBUG 96332 --- [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2022-11-02 17:21:10.908 DEBUG 96332 --- [main] _.s.web.servlet.HandlerMapping.Mappings  : 'beanNameHandlerMapping' {}
+2022-11-02 17:21:10.946 DEBUG 96332 --- [main] _.s.web.servlet.HandlerMapping.Mappings  : 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2022-11-02 17:21:11.148  INFO 96332 --- [main] e.b.e.service.impl.RestServiceImplTest   : Started RestServiceImplTest in 4.039 seconds (JVM running for 5.234)
+2022-11-02 17:21:17.193 DEBUG 96332 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [GET http://localhost:29200/] returned [HTTP/1.1 200 OK]
+2022-11-02 17:21:17.271 DEBUG 96332 --- [main] org.elasticsearch.client.RestClient      : request [POST http://localhost:29200/order_wide/_search?typed_keys=true&max_concurrent_shard_requests=5&search_type=query_then_fetch&batched_reduce_size=512] returned [HTTP/1.1 200 OK]

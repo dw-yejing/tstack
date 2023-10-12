@@ -1,0 +1,22 @@
+server:
+  port: 8089
+
+logging:
+  level:
+    ROOT: DEBUG
+  file:
+    path: ./log
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: 8.141.151.212:9092
+      properties:
+        # 开启幂等
+        enable.idempotence: true
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      bootstrap-servers: 8.141.151.212:9092
+      enable-auto-commit: false
+      ack-mode=manual: manual
+#      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
